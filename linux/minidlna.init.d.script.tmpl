@@ -22,6 +22,7 @@ MINIDLNA=:SBINDIR:/minidlnad
 PIDFILE=/var/run/minidlna/minidlna.pid
 CONF=/etc/minidlna.conf
 ARGS="-f $CONF"
+USER=minidlna
 
 test -f $MINIDLNA || exit 0
 
@@ -29,17 +30,17 @@ test -f $MINIDLNA || exit 0
 
 case "$1" in
 start)  log_daemon_msg "Starting minidlna" "minidlna"
-        start-stop-daemon --start --quiet --pidfile $PIDFILE --startas $MINIDLNA -- $ARGS $LSBNAMES
+        start-stop-daemon --start --chiud $USER --quiet --pidfile $PIDFILE --startas $MINIDLNA -- $ARGS $LSBNAMES
         log_end_msg $?
         ;;
 stop)   log_daemon_msg "Stopping minidlna" "minidlna"
-        start-stop-daemon --stop --quiet --pidfile $PIDFILE
+        start-stop-daemon --stop --chuid $USER --quiet --pidfile $PIDFILE
         log_end_msg $?
         ;;
 restart|reload|force-reload)
         log_daemon_msg "Restarting minidlna" "minidlna"
-        start-stop-daemon --stop --retry 5 --quiet --pidfile $PIDFILE
-        start-stop-daemon --start --quiet --pidfile $PIDFILE --startas $MINIDLNA -- $ARGS $LSBNAMES
+        start-stop-daemon --stop --chuid $USER --retry 5 --quiet --pidfile $PIDFILE
+        start-stop-daemon --start --chuid $USER --quiet --pidfile $PIDFILE --startas $MINIDLNA -- $ARGS $LSBNAMES
         log_end_msg $?
         ;;
 status)
