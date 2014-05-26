@@ -94,9 +94,9 @@
 	"http-get:*:video/mpeg:DLNA.ORG_PN=AVC_TS_MP_SD_MPEG1_L3_ISO," \
 	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_PS_NTSC," \
 	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_PS_PAL," \
-	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_TS_HD_NA_ISO," \
+	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_TS_HD_60_L2_ISO," \
 	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_TS_SD_NA_ISO," \
-	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_TS_SD_EU_ISO," \
+	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG_TS_SD_JP_ISO," \
 	"http-get:*:video/mpeg:DLNA.ORG_PN=MPEG1," \
 	"http-get:*:video/mp4:DLNA.ORG_PN=AVC_MP4_MP_SD_AAC_MULT5," \
 	"http-get:*:video/mp4:DLNA.ORG_PN=AVC_MP4_MP_SD_AC3," \

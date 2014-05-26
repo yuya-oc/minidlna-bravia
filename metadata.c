@@ -927,14 +927,14 @@ GetVideoMetadata(const char *path, char *name)
 					if( (vc->width  >= 1280) &&
 					    (vc->height >= 720) )
 					{
-						off += sprintf(m.dlna_pn+off, "HD_NA");
+						off += sprintf(m.dlna_pn+off, "HD_60_L2");
 					}
 					else
 					{
 						off += sprintf(m.dlna_pn+off, "SD_");
 						if( (vc->height == 576) ||
 						    (vc->height == 288) )
-							off += sprintf(m.dlna_pn+off, "EU");
+							off += sprintf(m.dlna_pn+off, "JP");
 						else
 							off += sprintf(m.dlna_pn+off, "NA");
 					}
