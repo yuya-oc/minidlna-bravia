@@ -30,7 +30,7 @@ test -f $MINIDLNA || exit 0
 
 case "$1" in
 start)  log_daemon_msg "Starting minidlna" "minidlna"
-        start-stop-daemon --start --chiud $USER --quiet --pidfile $PIDFILE --startas $MINIDLNA -- $ARGS $LSBNAMES
+        start-stop-daemon --start --chuid $USER --quiet --pidfile $PIDFILE --startas $MINIDLNA -- $ARGS $LSBNAMES
         log_end_msg $?
         ;;
 stop)   log_daemon_msg "Stopping minidlna" "minidlna"
